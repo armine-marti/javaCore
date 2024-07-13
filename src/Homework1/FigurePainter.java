@@ -5,11 +5,8 @@ public class FigurePainter {
         int x,y;
         int rows = 5;
         for (x=0;x<rows;x++){
-            for (y=1*(rows-x);y<=5; y++){
+            for (y=0;y<=x; y++){
                 System.out.print(" *");
-            }
-            for (y=1*(rows-x); y<=0; y--){
-                System.out.print(" ");
             }
             System.out.println();
         }
@@ -18,16 +15,13 @@ public class FigurePainter {
 
         int m,n;
         int lines = 5;
-        for(m=5; m>0; m--){
-            for(n=1; n<=m; n++){
-                System.out.print("* ");
+        for(m=0; m<lines; m++){
+            for(n=5; n>m; n--){
+                System.out.print(" *");
             }
-            for(n=0;n<=5; n++);
-            System.out.print(" ");
             System.out.println();
         }
         System.out.println();
-
 
         int k,l;
         int size = 5;
