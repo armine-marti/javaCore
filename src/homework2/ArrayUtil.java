@@ -15,7 +15,8 @@ public class ArrayUtil {
         System.out.println();
 
         //3-last element
-        System.out.println(numbers[8]);
+        int lastElement = numbers.length - 1;
+        System.out.println(lastElement);
         System.out.println();
 
         //4-array length
