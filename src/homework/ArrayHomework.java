@@ -18,11 +18,33 @@ public class ArrayHomework {
             System.out.println("6 appears " + count + " time in the array ");
         }
 
+        /*teacher's code
+        int n = 6;
+        int count = 0;
+        for(int x:array){
+        if (x == n) {
+        count ++;
+        }}
+         */
+
         System.out.println("\nexercise 2");
         //print array numbers in reverse order
         for (int i = numbers.length - 1; i >= 0; i--) {
             System.out.print(numbers[i] + " ");
         }
+
+        /*teahcer's ocde for 2
+        int endIndex = array.length - 1;
+        for (int i = 0; i<array.length/2;i++){
+        int tmp = array[i];
+        array[i] = array[endIndex];
+        array[endIndex--] = tmp;
+
+        for (int x:array) {
+        sout(x+ " ");
+        }
+
+         */
 
 
         System.out.println();
@@ -37,6 +59,15 @@ public class ArrayHomework {
                 }
             }
         }
+        /*
+        int count = 0;
+        for (int i = 0; i<array.length; i++){
+        for (int j = i+1; j<array.length; j++){
+        if (array[i] == array[j]){
+        break
+        }}}
+        sout("duplicate count = " +count);
+         */
 
         System.out.println();
         System.out.println("\nexercise 4");
