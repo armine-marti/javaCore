@@ -3,12 +3,12 @@ package homework.braceChecker;
 public class BraceChecker {
     public String text;
 
+    public BraceChecker(){
+
+    }
     public BraceChecker(String text){
         this.text = text;
     }
-    Brace type1 = new Brace('{');
-    Brace type2 = new Brace('[');
-    Brace type3 = new Brace('(');
 
 
     public void check(){
@@ -30,13 +30,13 @@ public class BraceChecker {
                 case'}':
                     last.index = braceArray.pop();
                     if(last.index != '{'){
-                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed " + first);
+                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed:  " + first);
                     }
                     break;
                 case(']'):
                     last.index = braceArray.pop();
                     if(last.index !='['){
-                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed " + first);
+                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed: " + first);
                     }
                     break;
                 case(')'):

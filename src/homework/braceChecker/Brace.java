@@ -9,8 +9,8 @@ public class Brace {
     public Brace (char brace){
         this.brace = brace;
     }
-    public Brace(int index){
-        this.index = index;
+    public Brace(int ind){
+        this.index = ind;
     }
     public String toString() {
         return Character.toString(brace);

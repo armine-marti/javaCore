@@ -10,7 +10,7 @@ public class Stack {
 
     void push(char brace){
         if(size==9)
-            System.out.println("Stack is full");
+            System.out.println("Stack is full!");
         else
             braces[++size] = new Brace(brace);
     }
