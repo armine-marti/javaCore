@@ -6,34 +6,43 @@ public class BraceChecker {
     public BraceChecker(String text){
         this.text = text;
     }
+    Brace type1 = new Brace('{');
+    Brace type2 = new Brace('[');
+    Brace type3 = new Brace('(');
+
+
     public void check(){
         Stack braceArray = new Stack();
         for (int i = 0; i<text.length();i++){
-            char x = text.charAt(i);
-            char y;
+            Brace first = new Brace();
+            first.brace = text.charAt(i);
+            Brace last = new Brace();
+            //x= text.charAt(i);
+            //char y;
 
-            switch (x) {
+
+            switch (first.brace) {
                 case ('{'):
                 case ('['):
                 case ('('):
-                    braceArray.push(x);
+                    braceArray.push(first.brace);
                     break;
                 case'}':
-                    y = (char)braceArray.pop();
-                    if(y != '{'){
-                        System.out.println("Error at " +i + ". " + "opened "+ y +"but closed " + x);
+                    last.index = braceArray.pop();
+                    if(last.index != '{'){
+                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed " + first);
                     }
                     break;
                 case(']'):
-                    y = (char)braceArray.pop();
-                    if(y !='['){
-                        System.out.println("Error at " +i + ". " + "opened "+ y +"but closed " + x);
+                    last.index = braceArray.pop();
+                    if(last.index !='['){
+                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed " + first);
                     }
                     break;
                 case(')'):
-                    y = (char)braceArray.pop();
-                    if(y !='('){
-                        System.out.println("Error at " +i + ". " + "opened "+ y +"but closed " + x);
+                    last.index = braceArray.pop();
+                    if(last.index !='('){
+                        System.out.println("Error at " +i + ". " + "opened "+ last +"but closed " + first);
                     }
                     break;
             }

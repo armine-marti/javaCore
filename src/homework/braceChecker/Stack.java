@@ -1,18 +1,18 @@
 package homework.braceChecker;
 
 public class Stack {
-    private int[] brace = new int[10];
+    public Brace[] braces = new Brace[10];
     private int size;
 
     Stack(){
         size = -1;
     }
 
-    void push(int item){
+    void push(char brace){
         if(size==9)
             System.out.println("Stack is full");
         else
-            brace[++size] = item;
+            braces[++size] = new Brace(brace);
     }
 
     int pop() {
@@ -20,6 +20,6 @@ public class Stack {
             System.out.println("Stack underflow");
             return 0;
         } else
-            return brace[size--];
+            return braces[size--].brace;
     }
 }
