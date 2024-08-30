@@ -7,12 +7,15 @@ public class Book {
     private String tittle;
     private String authorName;
     private double price;
+    private int quantity;
 
-    public Book(String id, String tittle, String authorName, double price){
+
+    public Book(String id, String tittle, String authorName, double price, int quantity){
         this.id = id;
         this.tittle = tittle;
         this.authorName = authorName;
         this.price = price;
+        this.quantity = quantity;
     }
     public Book(){
     }
@@ -49,6 +52,14 @@ public class Book {
         this.price = price;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,7 +84,8 @@ public class Book {
                 "id='" + id + '\'' +
                 ", tittle='" + tittle + '\'' +
                 ", authorName='" + authorName + '\'' +
-                ", price=" + price +
+                ", price=" + price + '\'' +
+                ", quantity=" +quantity +
                 '}';
     }
 }
