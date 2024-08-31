@@ -1,25 +1,30 @@
 package homework.braceChecker;
 
 public class Stack {
-    public Brace[] braces = new Brace[10];
-    private int size;
+    private Brace [] array = new Brace[10];
+    private int tos;
 
-    Stack(){
-        size = -1;
+   public Stack(){
+        tos = -1;
     }
 
-    void push(char brace){
-        if(size==9)
+    void push(Brace item){
+        if(tos==9) {
             System.out.println("Stack is full!");
-        else
-            braces[++size] = new Brace(brace);
+        } else {
+            array[++tos] = item;
+        }
     }
 
-    int pop() {
-        if (size < 0) {
-            System.out.println("Stack underflow");
-            return 0;
-        } else
-            return braces[size--].brace;
+    Brace pop() {
+        if (tos < 0) {
+            return null;
+        } else {
+            return array[tos--];
+        }
+
+    }
+    public boolean isEmpty(){
+       return tos == -1;
     }
 }

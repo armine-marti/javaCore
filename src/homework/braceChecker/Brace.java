@@ -1,18 +1,29 @@
 package homework.braceChecker;
 
 public class Brace {
-    public char brace;
-    public int index;
+    private char brace;
+    private int index;
 
     public Brace() {
     }
-    public Brace (char brace){
+    public Brace (char brace, int index){
         this.brace = brace;
+        this.index = index;
     }
-    public Brace(int ind){
-        this.index = ind;
+
+    public char getBrace() {
+        return brace;
     }
-    public String toString() {
-        return Character.toString(brace);
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    public void setBrace(char brace) {
+        this.brace = brace;
     }
 }
