@@ -56,7 +56,15 @@ public class BookStorage {
         for (int i = 0; i < size; i++) {
             if (books[i].getPrice() >= min && books[i].getPrice() <= max) {
                 System.out.println(books[i]);
-            }else System.out.println("No book with that price range");
+            }else System.out.println("No book with that price range!");
+        }
+    }
+
+    public void searchMyAuthor(Author author) {
+        for(int i = 0; i < size; i++){
+             if(books[i].getAuthor().equals(author)){
+                System.out.println(books[i]);
+            }
         }
     }
 }
